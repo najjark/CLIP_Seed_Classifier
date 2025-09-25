@@ -1,14 +1,9 @@
 # CLIP Seed Quality Classifier
 
-This project involves fine-tuning OpenAI's CLIP model on a datset of oil palm seeds so it can learn to differentiate between healthy and unhealhty ones.
+This project involves fine-tuning OpenAI's CLIP model on a datset of oil palm seeds to differentiate between healthy and unhealhty ones.
 
-CLIP uses images combined with text to learn features of each class.
+CLIP uses images combined with text to learn features of each class of seed(healthy and unhealthy).
 
-To streamline the process we use ChatGPT to automatically generate prompts describing each class of seed (good and bad).
+The textual descriptions that CLIP will use for training are inside the 'config.py' file, changing these affects how the model learns the features
 
-You will need to use your own OpenAI API key to be able to automatically generate the prompts, you can use it on **Line 1** of the code
-
-Alternatively, you can skip the API call by hardcoding the 'bad_seed_prompts' and 'good_seed_prompts' lists directly in the code. (ensure they are defined in that order)
-
-# Modifying Model Parameters
-In the code, you can customize the model and training parameters by modifying the 'run_params' dictionary, the dictionary is located on **Line 63** in the code.
+You can also change more of the training parameters like the number of epochs and batch size from the 'config.py' file.
