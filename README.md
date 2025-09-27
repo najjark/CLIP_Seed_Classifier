@@ -8,4 +8,4 @@ We use one dataset to train our model then we test it on 3 different datasets, e
 
 The textual descriptions that CLIP will use for training are inside the 'config.py' file, changing these affects how the model learns the features
 
-You can also change more of the training parameters like the number of epochs and learning rate from the 'config.py' file.
+We can also change more learning parameters from inside this file like the number of epochs or the learning rate of the model.
