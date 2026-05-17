@@ -1,17 +1,14 @@
 # CLIP Seed Quality Classifier
 
 ## Project Description
-This project involves fine-tuning OpenAI's CLIP model on a datset of oil palm seeds to differentiate between healthy and unhealhty ones.
+This project involves fine-tuning OpenAI's CLIP model on a dataset of oil palm seeds to classify them as healthy or unhealthy.
 
 ## CLIP Model Overview
-CLIP is a vison-langauge model (vlm) developed by OpenAI that can utilise both images and text in it's learning process.
+CLIP is a vision-language model (VLM) developed by OpenAI that learns from both images and text. We fine-tune CLIP on images of germinated oil palm seeds paired with short textual descriptions, enabling it to distinguish between the two seed classes.
 
-For our project uses we fine-tune CLIP on images of germinated oil palm seeds and short textual descriptions, allowing it to learn in distinguishing between the two seed classes (healthy and unhealthy).
 
 ## Training Process
-We use one dataset of images to train our model then we test it on 3 different datasets, each of which was captured under different lighting conditions, we do this to test the generalizability of our model and ensure it does not overfit on our training images.
+The model is trained on one dataset and evaluated on three separate datasets captured under different lighting conditions, testing the model's generalizability and resistance to overfitting.
 
 ## Model Configuration
-The textual descriptions that CLIP will use for training are inside the 'config.py' file, changing these affects how the model learns the features.
-
-We can also change more learning parameters from inside this file like the number of epochs or the learning rate of the model.
+Textual descriptions used during training are defined in config.py. This file also controls key hyperparameters such as the number of epochs and learning rate.
